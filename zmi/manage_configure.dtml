@@ -1,0 +1,106 @@
+<dtml-var manage_page_header>
+<dtml-var manage_tabs>
+
+<p class="form-help">
+  A translation service provides translations for internationalized code.
+</p>
+
+<p class="form-help">
+  This translation service provides an indirection to different message
+  catalogs depending on the domain of the translation.
+</p>
+
+<form action="&dtml-URL1;" method="POST">
+
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tr class="list-header">
+  <td align="left" valign="top" width="16">
+    &nbsp;
+  </td>
+  <td align="left" valign="top">
+    <div class="form-label">Domain</div>
+  </td>
+  <td align="left" valign="top">
+    <div class="form-label">Message catalog</div>
+  </td>
+</tr>
+<dtml-in getDomainInfo>
+<dtml-let domain=sequence-key
+          path=sequence-item
+          index=sequence-index>
+  <tr class="row-normal">
+    <td align="left" valign="top">
+      <dtml-if "domain != _.None">
+        <input type="checkbox" name="check_&dtml-index;">
+      </dtml-if>
+    </td>
+    <td align="left" valign="top">
+      <dtml-if "domain == _.None">
+        <p>Default</p>
+      <dtml-else>
+        <div class="form-label">
+          <input type="text" name="domain_&dtml-index;" value="&dtml-domain;" size="20" />
+        </div>
+      </dtml-if>
+    </td>
+    <td align="left" valign="top">
+      <div class="form-item">
+        <input type="text" name="path_&dtml-index;" value="&dtml-path;" size="40" />
+      </div>
+    </td>
+  </tr>
+</dtml-let>
+</dtml-in>
+<tr>
+  <td align="left" colspan="1">
+    <input type="submit" name="manage_delDomainInfo:method" value=" Delete " />
+  </td>
+  <td align="left" colspan="2">
+    <input type="submit" name="manage_setDomainInfo:method" value=" Change " />
+  </td>
+</tr>
+</table>
+
+<br />
+<br />
+
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tr class="list-header">
+  <td align="left" valign="top" colspan="2">
+    <div class="form-label">Add a new domain</div>
+  </td>
+</tr>
+<tr>
+  <td align="left">
+    <div class="form-label">Domain</div>
+  </td>
+  <td align="left">
+    <div class="form-item"><input type="text" name="domain" size="20" /></div>
+  </td>
+</tr>
+<tr>
+  <td align="left">
+    <div class="form-label">Path to the message catalog</div>
+  </td>
+  <td align="left">
+    <div class="form-item"><input type="text" name="path" size="40" /></div>
+  </td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td align="left">
+    <input type="submit" name="manage_addDomainInfo:method" value=" Add ">
+  </td>
+</tr>
+</table>
+
+
+
+
+
+
+
+</form>
+
+
+<dtml-var manage_page_footer>

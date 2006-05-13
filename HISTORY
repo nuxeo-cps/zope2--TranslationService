@@ -1,0 +1,189 @@
+*******************************************
+** TranslationService V0.11.0 [R1 build 2006/01/23-17:37 by fermigier]
+** SVN URL: https://svn.nuxeo.org/pub/TranslationService/trunk Revision: 31976
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- Added notes about the returned unicode objects by the translate methods.
+
+*******************************************
+** TranslationService V0.10.0 [R1 build 2005/09/21-15:36 by fguillaume]
+** SVN URL: https://svn.nuxeo.org/pub/TranslationService/trunk Revision: 27306
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- #677: translate() should always return unicode.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- Added unit tests.
+
+*******************************************
+** TranslationService V0.9.1 [R1 build 2005/08/05-14:02 by ben]
+** SVN URL: https://svn.nuxeo.org/pub/TranslationService/trunk Revision: 25426
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- return msgid % mapping as default expression if no default is specified
+  instead of a None object
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
+** TranslationService V0.9.0 [R1 build 2005/04/14-09:28 by ben]
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- Revert the behavior of the translation mechanism which was to first try to
+  return English translations when no translation is found in the target
+  language. This behavior is not needed anymore with .po files of good quality
+  that CPS products have now through the use of the new update_pos script.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
+** TranslationService V0.8.0 [R1 build 2005/04/08-15:51 by ben]
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+- Added methods getSelectedLanguage(), getDefaultLanguage(),
+  getSupportedLanguages(), getLanguagesMap(), changeLanguage(lang).
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
+** TranslationService V0.7.0 [R1 build 2005/03/07-07:41 by madarche]
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+- Made the translation mechanism to first try to return English translations
+  when no translation is found in the target language. Then if it fails it will
+  return the default specified value. This feature, along with fuzzy
+  translations deletion, should improve the usability of sites not fully
+  translated.
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
+** TranslationService V0.6.1 [R1 build 2005/01/20-11:54 by ben]
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- Correctly replace Unicode substitutions with Localizer
+  (http://collector.zope.org/Zope/1590)
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
+** TranslationService V0.6.0 [R1 build 2004/09/03-13:42 by ben]
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- In the tool, translate() takes a domain, but __call__() always uses
+  the default domain as it's the main use case.
+
+*******************************************
+** TranslationService V0.5.0 [R1 build 2004/08/23-16:04 by madarche]
+
+ZODB Requires:
+~~~~~~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+- Made available the translate method so that it is now possible to translate
+  strings with variables in them from python code, ie without using ZPT.
+Bug fixes:
+~~~~~~~~~~
+- When there is no translation provided, do what's necessary to have
+  the default be used. Differences between Zope 2.6 and Zope 2.7.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- mini-cleanup
+
+*******************************************
+** TranslationService V0.4.0 [R1 build 2003-06/17-14:33 by guillaum]
+
+New features:
+~~~~~~~~~~~~~
+- Compatible with Zope 2.7.
+
+*******************************************
+** TranslationService V0.3.0
+
+Bug fixes:
+~~~~~~~~~~
+- Don't bomb if an interpolation string has an unknown ${substitution},
+  just leave it in the resulting string.
+- Don't bomb if a non-ASCII string is passed as a substitution, try to
+  infer its encoding from the output encoding (which will be the case
+  if the string is issued from Localizer).
+
+*******************************************
+** TranslationService V0.2.0
+
+New features:
+~~~~~~~~~~~~~
+- Rename from PersistentTranslationService to TranslationService.
+- Now fully use the Zope 2.6 framework.
+
+*******************************************
+** TranslationService V0.2.0
+
+New features:
+~~~~~~~~~~~~~
+- Initial release.
