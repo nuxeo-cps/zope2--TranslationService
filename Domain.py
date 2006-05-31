@@ -23,8 +23,9 @@ import Globals
 from DocumentTemplate.DT_Util import ustr
 from OFS.SimpleItem import SimpleItem
 
-from TAL.TALInterpreter import _interp_regex, _get_var_regex
-
+NAME_RE = r"[a-zA-Z][a-zA-Z0-9_]*"
+_interp_regex = re.compile(r'(?<!\$)(\$(?:%(n)s|{%(n)s}))' % {'n': NAME_RE})
+_get_var_regex = re.compile(r'%(n)s' % {'n': NAME_RE})
 _charset_regex = re.compile(
     r'text/[0-9a-z]+\s*;\s*charset=([-_0-9a-z]+)(?:(?:\s*;)|\Z)',
     re.IGNORECASE)

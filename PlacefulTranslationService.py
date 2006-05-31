@@ -23,7 +23,6 @@ Provides a configurable placeful translation service that can call
 into different message catalogs.
 """
 
-from zLOG import LOG, DEBUG
 from Globals import InitializeClass
 from Globals import DTMLFile
 from AccessControl import ClassSecurityInfo
