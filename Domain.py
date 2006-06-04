@@ -1,4 +1,4 @@
-# (C) Copyright 2002, 2003 Nuxeo SARL <http://nuxeo.com>
+# (C) Copyright 2002-2006 Nuxeo SAS <http://nuxeo.com>
 # Author: Florent Guillaume <fg@nuxeo.com>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -32,7 +32,7 @@ _charset_regex = re.compile(
 
 
 def _findEncoding():
-    encoding = 'latin1'
+    encoding = 'latin9'
     get_request = getattr(Globals, 'get_request', None)
     if get_request is None:
         request = None
