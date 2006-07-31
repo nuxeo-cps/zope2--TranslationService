@@ -3,10 +3,10 @@ Requires:
 -
 New features:
 ~~~~~~~~~~~~~
-- Compatibility with Zope 2.10.
+-
 Bug fixes:
 ~~~~~~~~~~
-- Fixed default encoding to be Latin9.
+-
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -

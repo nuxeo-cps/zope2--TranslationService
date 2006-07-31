@@ -1,4 +1,20 @@
 *******************************************
+** TranslationService V0.11.1 [R1 build 2006/07/31-11:05 by fermigier]
+** SVN URL: https://svn.nuxeo.org/pub/Zope2/TranslationService/trunk Revision: 47588
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+- Compatibility with Zope 2.10.
+Bug fixes:
+~~~~~~~~~~
+- Fixed default encoding to be Latin9.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
 ** TranslationService V0.11.0 [R1 build 2006/01/23-17:37 by fermigier]
 ** SVN URL: https://svn.nuxeo.org/pub/TranslationService/trunk Revision: 31976
 Requires:
