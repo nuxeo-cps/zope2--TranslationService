@@ -32,7 +32,7 @@ _charset_regex = re.compile(
 
 
 def _findEncoding():
-    encoding = 'latin9'
+    encoding = 'iso-8859-15'
     get_request = getattr(Globals, 'get_request', None)
     if get_request is None:
         request = None

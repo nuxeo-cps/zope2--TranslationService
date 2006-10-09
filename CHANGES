@@ -6,7 +6,8 @@ New features:
 -
 Bug fixes:
 ~~~~~~~~~~
--
+- Fixed _findEncoding encoding search : "latin9" is an unknow python encoding
+  while "iso-8859-15" is.
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 -
