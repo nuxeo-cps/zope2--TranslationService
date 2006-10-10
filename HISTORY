@@ -1,3 +1,24 @@
+===========================================================
+Package: TranslationService 0.11.2
+===========================================================
+First release built by: ogrisel at: 2006-10-10T11:45:57
+SVN Tag: https://svn.nuxeo.org/pub/Zope2/TranslationService/tags/0.11.2
+Build from: https://svn.nuxeo.org/pub/Zope2/TranslationService/trunk@49442
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- Fixed _findEncoding encoding search : "latin9" is an unknow python encoding
+  while "iso-8859-15" is.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
 *******************************************
 ** TranslationService V0.11.1 [R1 build 2006/07/31-11:05 by fermigier]
 ** SVN URL: https://svn.nuxeo.org/pub/Zope2/TranslationService/trunk Revision: 47588
