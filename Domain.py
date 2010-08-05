@@ -21,6 +21,7 @@ import re
 
 import Globals
 from DocumentTemplate.DT_Util import ustr
+from ZPublisher.Converters import default_encoding
 from OFS.SimpleItem import SimpleItem
 
 NAME_RE = r"[a-zA-Z][a-zA-Z0-9_]*"
@@ -32,7 +33,7 @@ _charset_regex = re.compile(
 
 
 def _findEncoding():
-    encoding = 'iso-8859-15'
+    encoding = default_encoding
     get_request = getattr(Globals, 'get_request', None)
     if get_request is None:
         request = None
@@ -100,7 +101,7 @@ class Domain(SimpleItem):
         # Make sure we always return unicode
         if not isinstance(res, unicode):
             # This can happen if a non-unicode default is passed
-            res = unicode(res, 'iso-8859-15')
+            res = unicode(res, _findEncoding())
         return res
 
     #
