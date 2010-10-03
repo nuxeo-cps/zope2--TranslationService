@@ -1,4 +1,21 @@
 ===========================================================
+Package: TranslationService 0.12.1
+===========================================================
+First release built by: gracinet at: 2010-10-03T11:46:48
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- #2198: harcoded encoding in default values treatment
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: TranslationService 0.12.0
 ===========================================================
 First release built by: gracinet at: 2010-03-13T14:56:10
