@@ -40,7 +40,9 @@ msgstr "Salut ${name}"
 class SimpleTranslationTest(ZopeTestCase.ZopeTestCase):
 
     def makeSite(self):
-        self.root = Folder('')
+        # self.unrestrictedTraverse needs to find REQUEST, even if
+        # traversing to below self
+        self.root = Folder('').__of__(self.app)
 
         from Products.Localizer.MessageCatalog import MessageCatalog
         self.root.mc = MessageCatalog('mc', '', ['fr'])
@@ -65,11 +67,12 @@ class SimpleTranslationTest(ZopeTestCase.ZopeTestCase):
         self.assertEquals(type(t), unicode)
         self.assertEquals(t, u"foo")
 
-        t = translate('bah', default="caf\xe9")
+        french_roast = u"caf\xe9".encode('utf8')
+        t = translate('bah', default=french_roast)
         self.assertEquals(type(t), unicode)
         self.assertEquals(t, u"caf\xe9")
 
-        t = translate('caf\xe9')
+        t = translate(french_roast)
         self.assertEquals(type(t), unicode)
         self.assertEquals(t, u"caf\xe9")
 
